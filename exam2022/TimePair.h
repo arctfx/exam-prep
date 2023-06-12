@@ -5,7 +5,7 @@
 
 const char* DEFAULT_TIME = "00:00";
 
-class TimePair : protected Pair<char*> {
+class TimePair : virtual protected Pair<char*> {
 public:
     TimePair(const char* key, char* value) {
         m_key = new char[strlen(key) + 1];

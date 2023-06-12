@@ -1,0 +1,11 @@
+# ninja log v5
+7	1774	7082909716743248	CMakeFiles/exam_prep.dir/main.cpp.obj	283fa3eb779e8442
+21	399	7082909702947865	CMakeFiles/exam_prep.dir/exam2022/DatePair.cpp.obj	75fa745123864cfc
+47	370	7082850923138155	CMakeFiles/exam_prep.dir/exam2022/DateTimePair.cpp.obj	5c889dbd55fad0d5
+13	349	7082660650360842	CMakeFiles/exam_prep.dir/Encoding.cpp.obj	bbb416e04c39cc77
+1548	1838	7082889278656488	exam_prep.exe	202b431ff168189e
+26	1972	7082908864200328	CMakeFiles/exam_prep.dir/exam2022/StringPair.cpp.obj	fbdd735fbb8ff91a
+33	374	7082850923188208	CMakeFiles/exam_prep.dir/exam2022/TimePair.cpp.obj	e15dc412aaba3c31
+20	441	7082889264856175	CMakeFiles/exam_prep.dir/exam2022/Pair.cpp.obj	f03fc19f4d1a19d4
+1	1140	7082910439633763	build.ninja	a722bcf96f3204c4
+8	1278	7082910454833705	CMakeFiles/exam_prep.dir/main.cpp.obj	283fa3eb779e8442

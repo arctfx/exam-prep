@@ -4,6 +4,8 @@
 #include "DatePair.h"
 #include "TimePair.h"
 
+const char* DATE_TIME_PAIR = "(DateTimePair)";
+
 class DateTimePair : public DatePair, public TimePair {
 public:
     DateTimePair(const char* key, char* date, char* time) : DatePair(key, date), TimePair(key, time) {
@@ -12,12 +14,22 @@ public:
     ~DateTimePair() {
         free();
     }
-    DateTimePair(const DateTimePair& other) : DatePair(other), TimePair(other) {
+    DateTimePair(const DateTimePair& other) : DatePair(other.m_key, other.m_value), TimePair(other.m_key, other.m_value) {
 
     }
     DateTimePair& operator=(const DateTimePair& other) {
         free();
         this->copy(other.m_key, other.m_value);
+    }
+
+    char* toString() override {
+        char* res = new char[strlen(DATE_TIME_PAIR)+SEPARATORS_SIZE+ strlen(m_key)+ strlen(m_value) + 1];
+        strcpy(res, DATE_TIME_PAIR);
+        strcat(res, LEFT_SEPARATOR);
+        strcat(res,m_key);
+        strcat(res, MID_SEPARATOR);
+        strcat(res,m_value);
+        strcat(res, RIGHT_SEPARATOR);
     }
 
 private:

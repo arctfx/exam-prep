@@ -3,9 +3,10 @@
 
 #include "Pair.h"
 
+const char* DATE_PAIR = "(DatePair)";
 const char* DEFAULT_DATE = "01.01.0001";
 
-class DatePair : virtual protected Pair<char*> {
+class DatePair : virtual public Pair<char*> {
 public:
     DatePair(const char* key, char* value) {
         m_key = new char[strlen(key) + 1];
@@ -29,6 +30,17 @@ public:
         free();
         this->copy(other.m_key, other.m_value);
     }
+
+    char* toString() override {
+        char* res = new char[strlen(DATE_PAIR)+SEPARATORS_SIZE+ strlen(m_key)+ strlen(m_value) + 1];
+        strcpy(res, DATE_PAIR);
+        strcat(res, LEFT_SEPARATOR);
+        strcat(res,m_key);
+        strcat(res, MID_SEPARATOR);
+        strcat(res,m_value);
+        strcat(res, RIGHT_SEPARATOR);
+    }
+
 
 protected:
     void copy(const char* _key, char* _value) override {

@@ -3,7 +3,9 @@
 
 #include "Pair.h"
 
-class StringPair : protected Pair<char*> {
+const char* STRING_PAIR = "(StringPair)";
+
+class StringPair : public Pair<char*> {
 public:
     StringPair(const char* key, const char* value) {
         m_key = new char[strlen(key) + 1];
@@ -21,6 +23,16 @@ public:
     StringPair& operator=(const StringPair& other) {
         this->free();
         this->copy(other.m_key, other.m_value);
+    }
+
+    char* toString() override {
+        char* res = new char[strlen(STRING_PAIR)+SEPARATORS_SIZE+ strlen(m_key)+ strlen(m_value) + 1];
+        strcpy(res, STRING_PAIR);
+        strcat(res, LEFT_SEPARATOR);
+        strcat(res,m_key);
+        strcat(res, MID_SEPARATOR);
+        strcat(res,m_value);
+        strcat(res, RIGHT_SEPARATOR);
     }
 
 protected:

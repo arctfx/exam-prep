@@ -3,9 +3,10 @@
 
 #include "Pair.h"
 
+const char* TIME_PAIR = "(TimePair)";
 const char* DEFAULT_TIME = "00:00";
 
-class TimePair : virtual protected Pair<char*> {
+class TimePair : virtual public Pair<char*> {
 public:
     TimePair(const char* key, char* value) {
         m_key = new char[strlen(key) + 1];
@@ -28,6 +29,16 @@ public:
     TimePair& operator=(const TimePair& other) {
         free();
         this->copy(other.m_key, other.m_value);
+    }
+
+    char* toString() override {
+        char* res = new char[strlen(TIME_PAIR)+SEPARATORS_SIZE+ strlen(m_key)+ strlen(m_value) + 1];
+        strcpy(res, TIME_PAIR);
+        strcat(res, LEFT_SEPARATOR);
+        strcat(res,m_key);
+        strcat(res, MID_SEPARATOR);
+        strcat(res,m_value);
+        strcat(res, RIGHT_SEPARATOR);
     }
 
 protected:

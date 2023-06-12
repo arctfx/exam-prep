@@ -10,3 +10,8 @@
 1	1140	7082932615474868	build.ninja	a722bcf96f3204c4
 9	183	7082933025862628	CMakeFiles/exam_prep.dir/exam2022/DateTimePair.cpp.obj	5c889dbd55fad0d5
 185	627	7082933030032634	exam_prep.exe	a84982670e65c8d
+6	1220	7082940121994341	CMakeFiles/exam_prep.dir/main.cpp.obj	283fa3eb779e8442
+1222	1553	7082940125174374	exam_prep.exe	a84982670e65c8d
+19	255	7082949187394102	CMakeFiles/exam_prep.dir/exam2022/Pair.cpp.obj	f03fc19f4d1a19d4
+31	285	7082949187674097	CMakeFiles/exam_prep.dir/exam2022/StringPair.cpp.obj	fbdd735fbb8ff91a
+7	1332	7082949198114043	CMakeFiles/exam_prep.dir/main.cpp.obj	283fa3eb779e8442
